@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             // Créer une URL pour le serveur PHP
-            URL url = new URL("http://localhost/LesFripouilles/traitement.php");
+            URL url = new URL("http://172.23.10.25/fripouilles/fripouilles-web/traitement.php");
 
             // Créer une connexion HttpURLConnection
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -24,7 +24,7 @@ public class Main {
             conn.setRequestProperty("Content-Type", "application/json");
 
             // Créer un objet contenant les données à envoyer
-            MyData data = new MyData("12:00", "14:00", "frites", "supplément mayo");
+            MyData data = new MyData("12:00", "14:00", "2", "supplément mayo");
 
             // Encoder les données en JSON
             Gson gson = new Gson();
